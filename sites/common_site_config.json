@@ -1,6 +1,8 @@
 {
         "cache_redis_server": "redis://localhost:11311",
         "async_redis_server": "redis://localhost:12311",
-        "celery_broker": "redis://localhost:6379"
+        "celery_broker": "redis://localhost:6379",
+        "db_host": "dbdeverp.cfq9pg8kmd9f.ap-southeast-1.rds.amazonaws.com",
+        "db_name": "dbdeverp",
+        "db_password": "Deverp20"
 }
-                    

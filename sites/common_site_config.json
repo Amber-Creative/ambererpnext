@@ -1,0 +1,6 @@
+{
+        "cache_redis_server": "redis://localhost:11311",
+        "async_redis_server": "redis://localhost:12311",
+        "celery_broker": "redis://localhost:6379"
+}
+                    

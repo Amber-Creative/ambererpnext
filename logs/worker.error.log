@@ -1,0 +1,10 @@
+[2016-05-08 09:08:56,366: WARNING/MainProcess] celery@ip-172-31-23-157 ready.
+[2016-05-08 09:09:01,602: ERROR/Worker-1] Connection to Redis lost: Retry (0/20) now.
+[2016-05-08 09:09:01,603: ERROR/Worker-1] Connection to Redis lost: Retry (1/20) in 1.00 second.
+[2016-05-08 09:09:02,605: ERROR/Worker-1] Connection to Redis lost: Retry (2/20) in 1.00 second.
+[2016-05-08 09:09:03,607: ERROR/Worker-1] Connection to Redis lost: Retry (3/20) in 1.00 second.
+[2016-05-08 09:09:04,609: ERROR/Worker-1] Connection to Redis lost: Retry (4/20) in 1.00 second.
+[2016-05-08 09:09:05,613: ERROR/Worker-1] Connection to Redis lost: Retry (5/20) in 1.00 second.
+[2016-05-08 09:09:06,615: ERROR/Worker-1] Connection to Redis lost: Retry (6/20) in 1.00 second.
+[2016-05-08 09:09:07,617: ERROR/Worker-1] Connection to Redis lost: Retry (7/20) in 1.00 second.
+[2016-05-08 09:09:08,619: ERROR/Worker-1] Connection to Redis lost: Retry (8/20) in 1.00 second.

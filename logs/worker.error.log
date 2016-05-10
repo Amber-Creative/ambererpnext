@@ -8,3 +8,69 @@
 [2016-05-08 09:09:06,615: ERROR/Worker-1] Connection to Redis lost: Retry (6/20) in 1.00 second.
 [2016-05-08 09:09:07,617: ERROR/Worker-1] Connection to Redis lost: Retry (7/20) in 1.00 second.
 [2016-05-08 09:09:08,619: ERROR/Worker-1] Connection to Redis lost: Retry (8/20) in 1.00 second.
+[2016-05-10 08:09:52,031: ERROR/Worker-1] frappe.tasks.enqueue_events_for_site[81115015-0407-4abd-8c71-c063020c92ea]: Exception in Enqueue Events for Site erpnext
+[2016-05-10 08:09:52,055: ERROR/MainProcess] Task frappe.tasks.enqueue_events_for_site[81115015-0407-4abd-8c71-c063020c92ea] raised unexpected: OperationalError(1049, "Unknown database 'dbdeverp'")
+Traceback (most recent call last):
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/tasks.py", line 141, in enqueue_events_for_site
+    enqueue_events(site)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 22, in enqueue_events
+    if is_scheduler_disabled():
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 131, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 515, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 105, in sql
+    self.connect()
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 62, in connect
+    self.use(self.user)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 67, in use
+    self._conn.select_db(db_name)
+OperationalError: (1049, "Unknown database 'dbdeverp'")
+[2016-05-10 09:59:53,728: ERROR/Worker-1] frappe.tasks.enqueue_events_for_site[0678364c-45a6-46ae-b5a0-f09d6a6fac4b]: Exception in Enqueue Events for Site erpnext
+[2016-05-10 09:59:53,732: ERROR/MainProcess] Task frappe.tasks.enqueue_events_for_site[0678364c-45a6-46ae-b5a0-f09d6a6fac4b] raised unexpected: ProgrammingError(1146, "Table 'dbdeverp.tabSingles' doesn't exist")
+Traceback (most recent call last):
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/tasks.py", line 141, in enqueue_events_for_site
+    enqueue_events(site)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 22, in enqueue_events
+    if is_scheduler_disabled():
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 131, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 515, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 135, in sql
+    self._cursor.execute(query, values)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'dbdeverp.tabSingles' doesn't exist")
+[2016-05-10 10:04:53,810: ERROR/Worker-1] frappe.tasks.enqueue_events_for_site[a1d38497-17ba-402a-b21b-70839f35127b]: Exception in Enqueue Events for Site erpnext
+[2016-05-10 10:04:53,812: ERROR/MainProcess] Task frappe.tasks.enqueue_events_for_site[a1d38497-17ba-402a-b21b-70839f35127b] raised unexpected: ProgrammingError(1146, "Table 'dbdeverp.tabSingles' doesn't exist")
+Traceback (most recent call last):
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/tasks.py", line 141, in enqueue_events_for_site
+    enqueue_events(site)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 22, in enqueue_events
+    if is_scheduler_disabled():
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/utils/scheduler.py", line 131, in is_scheduler_disabled
+    return not frappe.utils.cint(frappe.db.get_single_value("System Settings", "enable_scheduler"))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 515, in get_single_value
+    tabSingles where doctype=%s and field=%s""", (doctype, fieldname))
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/apps/frappe/frappe/database.py", line 135, in sql
+    self._cursor.execute(query, values)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/opt/bitnami/apps/erpnext/htdocs/frappe-bench/env/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'dbdeverp.tabSingles' doesn't exist")
